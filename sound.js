@@ -13,7 +13,7 @@ let chords = [Dminor,Fmajor,Amajor,Dminor,Fmajor,Bfmajor,Cmajor,Aminor,Dminor,Fm
 let index = 0;
 let bg;
 let beginSketch = false;
-//Tone.Transport.start();
+Tone.Transport.start();
 function setup(){
   createCanvas(600,300);
    
