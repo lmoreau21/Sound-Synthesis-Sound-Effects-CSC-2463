@@ -66,7 +66,9 @@ function setup(){
 }
 
 function draw(){
-
+  if (Tone.context.state !== 'running') {
+    Tone.context.resume();
+  }
   background("lightblue");
   textAlign(CENTER);
   text("Click to Play Sound Effect", width/2, height/2);
