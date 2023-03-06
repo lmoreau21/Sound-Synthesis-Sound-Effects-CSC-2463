@@ -12,7 +12,6 @@ let Aminor = ['A4','C4','E4'];
 let chords = [Dminor,Fmajor,Amajor,Dminor,Fmajor,Bfmajor,Cmajor,Aminor,Dminor,Fmajor,Bfmajor,Cmajor,Amajor,Dminor,Fmajor,Cmajor,Amajor,Dminor];
 let index = 0;
 let bg;
-let start = true;
 let beginSketch = false;
 Tone.Transport.start();
 function setup(){
@@ -67,16 +66,14 @@ function setup(){
 }
 
 function draw(){
-  if(start){
-    Tone.start(); 
-    seq2.start();
-    start = false;
-  }
+
   background("lightblue");
   textAlign(CENTER);
   text("Click to Play Sound Effect", width/2, height/2);
   
   if (mouseIsPressed) {
+    Tone.start(); 
+    seq2.start();
     background(bg);
     beginSketch = true;
     seq1.start();
