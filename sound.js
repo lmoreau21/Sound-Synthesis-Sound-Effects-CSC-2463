@@ -14,7 +14,7 @@ let index = 0;
 let bg;
 let beginSketch = false;
 Tone.Transport.start();
-function setup(){
+function preload(){
   createCanvas(600,300);
    
   background('lightblue')
@@ -66,6 +66,7 @@ function setup(){
 }
 
 function draw(){
+  createCanvas(600,300);
   if (Tone.context.state !== 'running') {
     Tone.context.resume();
   }
@@ -74,8 +75,7 @@ function draw(){
   text("Click to Play Sound Effect", width/2, height/2);
   
   if (mouseIsPressed) {
-    Tone.start(); 
-    seq2.start();
+   
     background(bg);
     beginSketch = true;
     seq1.start();
